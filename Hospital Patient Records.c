@@ -11,38 +11,45 @@ Write a C program using functions + arrays + malloc/calloc + strings
 to perform all these checks.*/
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+struct ai
+{
+    char note[100];
+    int steps[5];
+    char *id;
+};
 
-struct ai{ 
-char note[1000];
-    int array[5];
-    int id;
-}s1;
-
-struct read(struct ai s1);
- count
-int main() {
-
-    int *p=&id.s1;
-    p =(int *)malloc(id * sizeof(id.s1));
-struct read();
-
+int valid(char *id)
+{
+    int n = strlen(id);
+    if(n >= 4)
+        return 1;
     return 0;
 }
-struct read(struct ai s1){
 
-    printf("enter note :");
-    fgets(s1.note,sizeof(s1.note),stdin);
-printf("enter stepcunt :");
-    for(int i=0;i<5;i++){
-scanf("%d",a1[i].array);
-    }
-    printf("enter id :");
-    scanf("%d",&a1.id);
-    
+void readuser(struct ai *u)
+{
+    fgets(u->note, sizeof(u->note), stdin);
 
+    for(int i = 0; i < 5; i++)
+        scanf("%d", &u->steps[i]);
 
-     
+    u->id = (char*)calloc(10, sizeof(char));
+    scanf("%s", u->id);
+}
 
-    
+int main()
+{
+    struct ai u;
+    readuser(&u);
+
+    if(valid(u.id))
+        printf("user valid");
+    else
+        printf("invalid id");
+
+    free(u.id);
+    return 0;
 }
