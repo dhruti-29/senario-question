@@ -1,26 +1,20 @@
 #include<stdio.h>
-int ssum(int a){
-  int sum=0;
+int main(){
 
-  for(int i=1;i<=a;i++){
+int i,n,sum;
+
+printf("Enter your number: ");
+scanf("%d",&n);
+
+sum=0;
+
+for(i=1;i<=n;i++){
     sum+=i;
-  }
-
-  return sum;
-
-  }
-
-  int main(){
-  int a;
-   printf("Enter your number: ");
-  scanf("%d",&a);
-
-
-  printf("%d",ssum(a));
+}
 
 
 
+printf("%d",sum);
 
 
-
-  }
+}
