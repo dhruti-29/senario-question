@@ -1,18 +1,16 @@
 #include<stdio.h>
-int main(){
+void ttable(int a){
+int i;
+ printf("Enter your table number: ");
+  scanf("%d",&a);
 
-int i,n,table;
-
-printf("Enter your number: ");
-scanf("%d",&n);
 
 for(i=1;i<=10;i++){
-    printf("%d X %d = %d\n",n,i,n*i);
+    printf("%d X %d = %d \n",a,i,a*i);
+  }
 }
-
-
-
-
-
+int main(){
+int a;
+ttable(a);
 
 }
